@@ -1,0 +1,114 @@
+/* pages/zone/index.wxss */
+
+.container > .avatar {
+  height: 300rpx;
+  background-color: dodgerblue;
+}
+
+.container > .avatar image {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  top: 30rpx;
+}
+
+.container > .avatar text {
+  position: absolute;
+  top: 235rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+.tabs {
+  background-color: #f4f5f5;
+  padding: 20rpx 0rpx;
+  height: 50rpx;
+}
+
+.tabs > view {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  position: relative;
+  padding: 0rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.tabs > view > view {
+  width: auto;
+  margin: 0 auto;
+  font-size: 30rpx;
+  padding-bottom: 25rpx;
+}
+
+.tabs view view.active {
+  color: dodgerblue;
+  font-weight: bold;
+  border-bottom: 5rpx solid dodgerblue;
+}
+
+.item {
+  padding: 20rpx;
+  margin-bottom: 10rpx;
+  background-color: white;
+}
+
+.container {
+  background-color: #f4f5f5;
+}
+
+.itemlist {
+  background-color: #f4f5f5;
+}
+
+.item .avatar {
+  padding: 10rpx;
+  position: relative;
+}
+
+.item .avatar image {
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 50%;
+}
+
+.item .avatar .name {
+  color: gray;
+  font-size: 30rpx;
+  position: absolute;
+  left: 80rpx;
+  top: 20rpx;
+}
+
+.item .title {
+  padding: 0rpx 10rpx 0rpx 10rpx;
+  font-size: 30rpx;
+}
+.empty {
+  text-align: center;
+  padding-top: 150rpx;
+  background-color: white;
+}
+
+.empty icon {
+  color: gray;
+  font-size: 250rpx;
+}
+
+.empty text {
+  color: gray;
+  display: block;
+  line-height: 150rpx;
+}
+
+.end {
+  background-color: #f4f5f5;
+  text-align: center;
+  line-height: 80rpx;
+  color: black;
+  font-size: 25rpx;
+}

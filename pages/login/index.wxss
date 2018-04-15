@@ -1,0 +1,45 @@
+.loginpanel {
+  background-color: white;
+  height: 100%;
+}
+
+.loginpanel .logo {
+  position: absolute;
+  top: 50rpx;
+  height: 100rpx;
+  width: 400rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.loginpanel .close {
+  position: fixed;
+  right: 20rpx;
+  top: 20rpx;
+}
+
+.loginpanel textarea {
+  width: 660rpx;
+  border: 2rpx solid gray;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  margin-top: 200rpx;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+}
+
+.loginpanel .login {
+  width: 700rpx;
+  margin-top: 50rpx;
+  margin: 0 auto;
+}
+
+button {
+  background-color: dodgerblue !important;
+  color: white !important;
+}
+
+button.button-hover {
+  background-color: dodgerblue !important;
+  color: white !important;
+}

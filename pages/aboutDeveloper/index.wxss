@@ -1,0 +1,38 @@
+/* pages/aboutDeveloper/index.wxss */
+
+.name {
+  padding: 20rpx;
+  font-weight: bold;
+  font-size: 40rpx;
+}
+
+.moto {
+  padding: 10rpx 20rpx;
+  color: gray;
+  font-size: 30rpx;
+}
+
+.list {
+  padding: 5rpx 0rpx;
+  background-color: #f4f5f5;
+}
+
+.item {
+  margin-bottom: 10rpx;
+  background-color: white;
+  padding: 0rpx 20rpx;
+}
+
+.item .title {
+  font-weight: bold;
+  padding: 20rpx 0rpx;
+  border-bottom: 2px solid #f4f5f5;
+}
+
+.item .content {
+  font-weight: bold;
+  color: gray;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  overflow-x: auto;
+}

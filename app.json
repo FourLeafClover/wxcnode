@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/comment/index",
+    "pages/login/index",
+    "pages/message/index",
+    "pages/topic/index",
+    "pages/zone/index",
+    "pages/aboutDeveloper/index",
+    "pages/addTopic/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1E90FF",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  }
+}

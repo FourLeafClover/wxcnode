@@ -1,0 +1,175 @@
+@import '../wemark/wemark.wxss';
+
+/* pages/comment/index.wxss */
+
+.tip {
+  padding: 10rpx;
+  text-align: center;
+  color: gray;
+  font-size: 25rpx;
+}
+
+.item {
+  padding: 0rpx 20rpx;
+  margin-bottom: 20rpx;
+  background-color: white;
+  position: relative;
+}
+
+.item .avatar {
+  height: 80rpx;
+  padding-top: 20rpx;
+}
+
+.item .avatar image {
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.item .avatar .name {
+  font-size: 30rpx;
+  color: gray;
+  position: absolute;
+  left: 90rpx;
+  top: 25rpx;
+  z-index: 5;
+}
+
+.item .opt {
+  padding-right: 20rpx;
+  height: 70rpx;
+}
+
+.item .opt icon {
+  float: right;
+  margin-left: 20rpx;
+  color: gray;
+  font-size: 25rpx;
+  padding-left: 5rpx;
+  line-height:70rpx;
+}
+
+.item .content {
+  padding: 0rpx 30rpx;
+}
+
+.line {
+  height: 20rpx;
+  background-color: #f4f5f5;
+  width: 100%;
+}
+
+.line1 {
+  height: 5rpx;
+  background-color: #f4f5f5;
+}
+
+.line2 {
+  height: 5rpx;
+  background-color: #f4f5f5;
+}
+
+.list {
+  min-height: 100%;
+  background-color: #f4f5f5;
+  padding-top: 20rpx;
+}
+
+.bottombar {
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  padding: 20rpx 0rpx;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f4f5f5;
+  z-index: 99;
+}
+
+.bottombar button {
+  width: 690rpx;
+}
+
+.bottombar input {
+  height: 80rpx;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  color: dodgerblue;
+  width: 700rpx;
+  background-color: white;
+  border: 2rpx solid white;
+  margin-left: 15rpx;
+}
+
+.empty icon {
+  position: absolute;
+  top: 20%;
+  font-size: 200rpx;
+  color: gray;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.empty text {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(220rpx);
+  -webkit-transform: translateY(220rpx);
+  color: gray;
+}
+
+.end {
+  text-align: center;
+  font-size: 25rpx;
+  line-height: 60rpx;
+  color: gray;
+  height: 80rpx;
+}
+
+.myReplies {
+  background-color: white;
+}
+
+.myReplies .tag {
+  padding: 20rpx 20rpx;
+  color: gray;
+  border-bottom: 2px solid #f4f5f5;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-weight: bold;
+}
+
+.fa-thumbs-up.active {
+  color: dodgerblue !important;
+}
+
+.myReplies .content {
+  padding: 20rpx 20px;
+  border-bottom: 10px solid #f4f5f5;
+  color: gray;
+  font-size: 30rpx;
+}
+
+.cover {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0rpx;
+  top: 0rpx;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 9;
+}
+
+.commentbtn {
+  background-color: dodgerblue;
+  text-align: center;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  margin: 0rpx 20rpx;
+  color: white;
+}

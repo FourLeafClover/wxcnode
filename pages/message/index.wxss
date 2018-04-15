@@ -1,0 +1,91 @@
+/* pages/message/index.wxss */
+
+.tabs{
+  position: fixed;
+  left: 0rpx;
+  top: 0rpx;
+  width: 100%;
+  background-color: #f4f5f5;
+  z-index: 9;
+}
+
+.tabs > view {
+  width: 50%;
+  display: inline-flex;
+  position: relative;
+  height: 75rpx;
+  background-color: #f4f5f5;
+}
+
+.tabs .tab {
+  width: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0rpx;
+  line-height: 75rpx;
+}
+
+.tab.active {
+  border-bottom: 5rpx solid dodgerblue;
+}
+
+.itemlist {
+  background-color: #f4f5f5;
+  margin-top: 80rpx;
+}
+
+.item {
+  background-color: white;
+  margin-bottom: 10rpx;
+  padding: 20rpx;
+}
+
+.item .avatar {
+  padding: 10rpx;
+  position: relative;
+}
+
+.item .avatar image {
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 50%;
+}
+
+.item .avatar .name {
+  color: dodgerblue;
+  font-size: 30rpx;
+  position: absolute;
+  left: 80rpx;
+  top: 20rpx;
+}
+
+.item .title {
+  padding: 0rpx 10rpx 0rpx 10rpx;
+  font-size: 30rpx;
+}
+
+.empty {
+  text-align: center;
+  padding-top: 200rpx;
+  background-color: white;
+}
+
+.empty icon {
+  color: gray;
+  font-size: 250rpx;
+}
+
+.empty text{
+  color: gray;
+  display: block;
+  line-height: 150rpx;
+}
+
+.end{
+  background-color: #f4f5f5;
+  text-align: center;
+  line-height: 80rpx;
+  color: black;
+  font-size: 25rpx;
+}

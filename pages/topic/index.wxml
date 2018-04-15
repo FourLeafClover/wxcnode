@@ -1,0 +1,40 @@
+<import src="../wemark/wemark.wxml" />
+<view v-if="{{model!=null}}" class='container'>
+  <view class='title' bindtap=''>
+    <text class='headerTab' wx:if="{{model.tab!=''}}">{{model.tab}}</text>{{model.title}}
+  </view>
+  <view class='line'></view>
+  <view class='pv'>
+    <image src='{{model.author.avatar_url}}'></image>
+    <text class='name'>{{model.author.loginname}}</text>
+    <text class='time'>发布于:{{model.create_at}} 阅读:{{model.visit_count}}</text>
+    <view class='button' bindtap='gotoZone' wx:if="{{isMyTopic==false}}">主页</view>
+    <icon class='fa fa-navicon  opt' bindtap='showOptSheet' wx:if="{{isMyTopic}}"></icon>
+  </view>
+  <view class='line'></view>
+  <view class='content'>
+    <template is="wemark" data="{{...wemark}}"></template>
+  </view>
+  <view style='height:80rpx;'></view>
+  <view class='bar'>
+    <view class='share'>
+      <view>
+        <icon class="fa fa-share-alt" style='color:gray'></icon>
+        <text>分享</text>
+        <button class='shareBtn' open-type="share"></button>
+      </view>
+    </view>
+    <view>
+      <view class='like {{model.is_collect?"active":""}}' bindtap='collect'>
+        <icon class="fa fa-heart"></icon>
+        <text>{{model.is_collect?"已收藏":"收藏"}}</text>
+      </view>
+    </view>
+    <view style='background-color:white'>
+      <view class='comment' bindtap='gotoComment'>
+        <icon class="fa fa-paper-plane"></icon>
+        <text>评论[{{model.reply_count}}]</text>
+      </view>
+    </view>
+  </view>
+</view>

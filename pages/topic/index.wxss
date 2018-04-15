@@ -1,0 +1,167 @@
+@import '../wemark/wemark.wxss';
+
+page {
+  min-height: 100%;
+}
+
+.container {
+  height: 100%;
+}
+
+.tip {
+  padding: 10rpx;
+  text-align: center;
+  color: gray;
+  font-size: 25rpx;
+}
+
+.content {
+  padding: 20rpx;
+  color: gray;
+}
+
+.title {
+  font-style: normal;
+  padding: 20rpx;
+  font-weight: bold;
+  word-break: break-all;
+  font-size: 35rpx;
+}
+
+.headerTab {
+  color: dodgerblue;
+}
+
+.opt {
+  position: absolute;
+  right: 70rpx;
+  top: 43rpx;
+  font-size: 50rpx;
+  color: dodgerblue;
+  font-weight: bold;
+}
+
+.pv {
+  padding: 20rpx;
+  width: 750rpx;
+  position: relative;
+}
+
+.pv image {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  margin-left: 20rpx;
+}
+
+.pv .name {
+  color: dodgerblue;
+  position: absolute;
+  top: 30rpx;
+  left: 160rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.pv .button {
+  position: absolute;
+  right: 70rpx;
+  top: 40rpx;
+  font-size: 25rpx;
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+  padding: 20rpx 30rpx;
+  border-radius: 10rpx;
+}
+
+.pv butto::after {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.pv .time {
+  font-size: 20rpx;
+  position: absolute;
+  left: 160rpx;
+  bottom: 40rpx;
+  color: gray;
+  font-weight: bold;
+}
+
+.bar {
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  width: 750rpx;
+  height: 90rpx;
+  padding-top: 10rpx;
+  border: 0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 1);
+  background-color: white;
+}
+
+.bar > view {
+  width: 250rpx;
+  float: left;
+}
+
+.bar > view > view {
+  position: relative;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 90rpx;
+  height: 100rpx;
+}
+
+.bar > view > view > icon {
+  position: absolute;
+  top: -8rpx;
+  width: 100rpx;
+  text-align: center;
+}
+
+.bar > view > view > text {
+  position: absolute;
+  top: 53rpx;
+  font-size: 20rpx;
+  color: gray;
+  width: 100rpx;
+  text-align: center;
+}
+
+.comment text {
+  color: dodgerblue;
+}
+
+.line {
+  height: 10rpx;
+  background-color: #f4f5f5;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.like {
+  color: gray;
+}
+
+.like.active {
+  color: red !important;
+}
+
+.comment {
+  color: dodgerblue;
+}
+
+.shareBtn {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}

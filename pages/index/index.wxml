@@ -1,0 +1,66 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='header'>
+    <view class='logo'>
+      <image class='logoImg' src='/assets/img/log1.jpg'></image>
+    </view>
+    <view class='txt'></view>
+    <icon bindtap='gotoMsg' class='fa fa-bell msg {{messageCount>0?"active":""}}'>{{messageCount>0?messageCount:""}}</icon>
+    <icon bindtap='toggleMenu' wx:if="{{userInfo==null}}" class='login fa fa-user-circle'></icon>
+    <view class='avatar' wx:if="{{userInfo!=null}}">
+      <image src="{{userInfo.avatar_url}}" bindtap='toggleMenu'></image>
+    </view>
+  </view>
+  <view class='pulldowntabs' wx:if="{{isShowMenu&&(userInfo!=null)}}">
+    <view bindtap='gotoZone'>个人主页</view>
+    <view bindtap='gotoAddTopic'>发布话题</view>
+    <view bindtap='gotoAboutMe'>关于开发者</view>
+    <view bindtap='logout'>退出</view>
+  </view>
+  <view class='pulldowntabs' wx:if="{{isShowMenu&&(userInfo==null)}}">
+    <view bindtap='gotoLogin'>登录</view>
+    <view bindtap='gotoAboutMe'>关于开发者</view>
+  </view>
+  <view class="tabs">
+    <view class='tab {{curTab==""?"active":""}}' data-tab="" bindtap='changeTab'>全部</view>
+    <view class='tab split'>|</view>
+    <view class='tab {{curTab=="good"?"active":""}}' data-tab="good" bindtap='changeTab'>精华</view>
+    <view class='tab split'>|</view>
+    <view class='tab {{curTab=="share"?"active":""}}' data-tab="share" bindtap='changeTab'>分享</view>
+    <view class='tab split'>|</view>
+    <view class='tab {{curTab=="ask"?"active":""}}' data-tab="ask" bindtap='changeTab'>问答</view>
+    <view class='tab split'>|</view>
+    <view class='tab {{curTab=="job"?"active":""}}' data-tab="job" bindtap='changeTab'>招聘</view>
+    <!--<view class='tab split'>|</view>
+    <view class='tab {{curTab=="dev"?"active":""}}' data-tab="dev" bindtap='changeTab'>客户端</view>-->
+  </view>
+  <view class='itemList'>
+    <view class="item" wx:for="{{items}}" wx:key="item.id" wx:for-item="item" bindtap='gotoDetail' data-item="{{item}}">
+      <view class="author" data-item="{{item}}">
+        <view>
+          <image src='{{item.author.avatar_url}}'></image>
+        </view>
+        <view class='name'>{{item.author.loginname}}</view>
+      </view>
+      <view class='line1'></view>
+      <view class="title">
+        <text class='headerTab' wx:if="{{item.tab!=''}}">{{item.tab}}</text>{{item.title}}
+      </view>
+      <view class="topicSummary">
+        {{item.content}}
+      </view>
+      <view class='line1'></view>
+      <view class="pv">
+        <view class="read">阅读量:{{item.visit_count>100000?'10w+':item.visit_count}}</view>
+        <view class="comment">评论数:{{item.reply_count}}</view>
+        <view class="publishtime">发布于:{{item.last_reply_at}}</view>
+      </view>
+    </view>
+    <view class='loading' wx:if="{{!loadingComplete}}">
+      <image src='/assets/img/loading.gif'></image>
+    </view>
+    <view class='end' wx:if="{{loadingComplete}}">
+      亲,数据加载完毕了
+    </view>
+  </view>
+</view>

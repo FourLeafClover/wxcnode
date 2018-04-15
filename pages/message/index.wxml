@@ -1,0 +1,48 @@
+<view class='tabs'>
+  <view>
+    <view class='tab {{activeTab==1?"active":""}}' bindtap='changeTab' data-tab="1">
+      未读消息
+    </view>
+  </view>
+  <view>
+    <view class='tab {{activeTab==2?"active":""}}' bindtap='changeTab' data-tab="2">
+      已读消息
+    </view>
+  </view>
+</view>
+<view class='itemlist' wx:if="{{(model!=null)&&(activeTab==1)}}">
+  <view wx:if="{{model.hasnot_read_messages.length>0}}">
+    <view class='item' wx:for="{{model.hasnot_read_messages}}" wx:key="{{item.id}}" wx:for-item="item" bindtap='gotoTopic' data-item="{{item}}">
+      <view class='avatar'>
+        <image src='{{item.author.avatar_url}}'></image>
+        <view class='name'>{{item.author.loginname}}{{item.type=="reply"?"回复了话题":"在话题中@了你"}}</view>
+      </view>
+      <view class='title'>
+        {{item.topic.title}}
+      </view>
+    </view>
+    <view class='end'>-END-</view>
+  </view>
+  <view class='empty' wx:if="{{model.hasnot_read_messages.length==0}}">
+    <icon class='fa fa-map-signs'></icon>
+    <text>什么也没有</text>
+  </view>
+</view>
+<view class='itemlist' wx:if="{{(model!=null)&&(activeTab==2)}}">
+  <view wx:if="{{model.has_read_messages.length>0}}">
+    <view class='item' wx:for="{{model.has_read_messages}}" wx:key="{{item.id}}" wx:for-item="item" bindtap='gotoTopic' data-item="{{item}}">
+      <view class='avatar'>
+        <image src='{{item.author.avatar_url}}'></image>
+        <view class='name'>{{item.author.loginname}}{{item.type=="reply"?"回复了话题":"在话题中@了你"}}</view>
+      </view>
+      <view class='title'>
+        {{item.topic.title}}
+      </view>
+    </view>
+    <view class='end'>-END-</view>
+  </view>
+  <view class='empty' wx:if="{{model.has_read_messages.length==0}}">
+    <icon class='fa fa-map-signs'></icon>
+    <text>什么也没有</text>
+  </view>
+</view>

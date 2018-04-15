@@ -1,0 +1,18 @@
+<!--pages/addTopic/index.wxml-->
+<view class='tabs'>
+  <view class='tab label'>模块:</view>
+  <view class='tab {{tab=="share"?"active":""}}' data-tab="share" bindtap='changeTab'>分享</view>
+  <view class='tab {{tab=="ask"?"active":""}}' data-tab="ask" bindtap='changeTab'>问答</view>
+  <view class='tab {{tab=="job"?"active":""}}' data-tab="job" bindtap='changeTab'>招聘</view>
+  <!--<view class='tab {{tab=="dev"?"active":""}}' data-tab="dev" bindtap='changeTab'>测试</view>-->
+</view>
+<view class='title'>
+  <input placeholder='请输入标题,标题字数10字以上' value='{{title}}' bindblur='changeTitle'></input>
+</view>
+<view class='content'>
+  <textarea bindblur='changeContent' value='{{content}}' placeholder='请输入话题内容,建议使用电脑发布话题,此页面没有引入MD编辑器,也无法支持图片上传等功能。'></textarea>
+</view>
+<view class='bottombar'>
+  <button type='primary' bindtap='addTopic' disabled='{{disableBtn}}' wx:if="{{topic_id==''}}">发布话题</button>
+  <button type='primary' bindtap='updateTopic' disabled='{{disableBtn}}' wx:if="{{topic_id!=''}}">更新话题</button>
+</view>

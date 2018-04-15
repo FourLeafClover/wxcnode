@@ -1,0 +1,8 @@
+<!--component/loginpanel/loginpanel.wxml-->
+<view class='loginpanel {{isOpen?"open":""}}'>
+  <image src='/assets/img/log.jpg' class='logo'></image>
+  <textarea placeholder='请输入登录token' bindinput='tokenBindInput'>
+  </textarea>
+  <button class='login' type='primary' bindtap='login'>登录</button>
+  <button class='login' type='primary' style='margin-top:20rpx;' bindtap='qrcodeLogin'>扫码登录</button>
+</view>

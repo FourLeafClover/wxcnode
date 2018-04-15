@@ -1,0 +1,77 @@
+<view class='container'>
+  <view class='avatar' wx:if="{{model!=null}}">
+    <image src='{{model.avatar_url}}'></image>
+    <text>{{model.loginname}}</text>
+  </view>
+  <view class='tabs'>
+    <view>
+      <view class='{{activeTab==1?"active":""}}' bindtap='changeTab' data-tag="1">
+        我的话题
+      </view>
+    </view>
+    <view>
+      <view class='{{activeTab==2?"active":""}}' bindtap='changeTab' data-tag="2">
+        最近评论
+      </view>
+    </view>
+    <view>
+      <view class='{{activeTab==3?"active":""}}' bindtap='changeTab' data-tag="3">
+        我的收藏
+      </view>
+    </view>
+  </view>
+  <view class='itemlist' wx:if="{{(model!=null)&&(activeTab==1)}}">
+    <view wx:if="{{model.recent_topics.length>0}}">
+      <view class='item' wx:for="{{model.recent_topics}}" wx:key="{{item.id}}" wx:for-item="item" bindtap='gotoTopic' data-item="{{item}}">
+        <view class='avatar'>
+          <image src='{{item.author.avatar_url}}'></image>
+          <view class='name'>{{item.author.loginname}}</view>
+        </view>
+        <view class='title'>
+          {{item.title}}
+        </view>
+      </view>
+      <view class='end'>-END-</view>
+    </view>
+    <view class='empty' wx:if="{{model.recent_topics.length==0}}">
+      <icon class='fa fa-map-signs'></icon>
+      <text>什么也没有</text>
+    </view>
+  </view>
+  <view class='itemlist' wx:if="{{(model!=null)&&(activeTab==2)}}">
+    <view wx:if="{{model.recent_replies.length>0}}">
+      <view class='item' wx:for="{{model.recent_replies}}" wx:key="{{item.id}}" wx:for-item="item" bindtap='gotoTopic' data-item="{{item}}">
+        <view class='avatar'>
+          <image src='{{item.author.avatar_url}}'></image>
+          <view class='name'>{{item.author.loginname}}</view>
+        </view>
+        <view class='title'>
+          {{item.title}}
+        </view>
+      </view>
+      <view class='end'>-END-</view>
+    </view>
+    <view class='empty' wx:if="{{model.recent_replies.length==0}}">
+      <icon class='fa fa-map-signs'></icon>
+      <text>什么也没有</text>
+    </view>
+  </view>
+  <view class='itemlist' wx:if="{{(collects!=null)&&(activeTab==3)}}">
+    <view wx:if="{{collects.length>0}}">
+      <view class='item' wx:for="{{collects}}" wx:for-item="item" wx:key="{{item.id}}" bindtap='gotoTopic' data-item="{{item}}">
+        <view class='avatar'>
+          <image src='{{item.author.avatar_url}}'></image>
+          <view class='name'>{{item.author.loginname}}</view>
+        </view>
+        <view class='title'>
+          {{item.title}}
+        </view>
+      </view>
+      <view class='end'>-END-</view>
+    </view>
+    <view class='empty' wx:if="{{collects.length==0}}">
+      <icon class='fa fa-map-signs'></icon>
+      <text>什么也没有</text>
+    </view>
+  </view>
+</view>

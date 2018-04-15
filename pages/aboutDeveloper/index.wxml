@@ -1,0 +1,69 @@
+<view>
+  <view class='name'>
+    张聪【Frank.Zhang】
+  </view>
+  <view class='moto'>
+    【格言】因为没有翅膀,所以要努力奔跑。
+  </view>
+  <view class='moto'>
+    【梦想】来一场说走就走的世界旅行。
+  </view>
+  <view class='list'>
+    <view class='item'>
+      <view class="title">
+        个人简介
+      </view>
+      <view class="content">
+        毕业于西南石油大学计算机科学科学与技术[2014届],前Newegg开发工程师,现上海跨境通国际贸易有限公司.NET开发工程师,目前就职于成都高新南区。
+      </view>
+    </view>
+    <view class='item'>
+      <view class="title">
+        github
+      </view>
+      <view class="content">
+        https://github.com/FourLeafClover
+      </view>
+    </view>
+    <view class='item'>
+      <view class="title">
+        博客园
+      </view>
+      <view class="content">
+        http://www.cnblogs.com/FourLeafCloverZc/
+      </view>
+    </view>
+    <view class='item'>
+      <view class="title">
+        邮箱
+      </view>
+      <view class="content">
+        zc_smile@outlook.com
+      </view>
+    </view>
+    <view class='item'>
+      <view class="title">
+        微信号
+      </view>
+      <view class="content">
+        haimianbaobao-sc
+      </view>
+    </view>
+    <view class='item'>
+      <view class="title">
+        爱好
+      </view>
+      <view class="content">
+        旅行|乒乓球|骑自行车
+      </view>
+    </view>
+    <view class='item'>
+      <view class="title">
+        技能
+      </view>
+      <view class="content">
+        小程序|VUE|.NET|LINUX
+      </view>
+    </view>
+  </view>
+</view>

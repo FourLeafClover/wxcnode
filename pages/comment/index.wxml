@@ -1,0 +1,38 @@
+<import src="../wemark/wemark.wxml" />
+<view class="tip">评论区点击头像和昵称可进入评论者主页</view>
+<view class='list' wx:if="{{(replies.length>0)||(myReplies.length>0)}}">
+  <view class='item' wx:for="{{replies}}" wx:key="{{item.id}}" wx:for-item="item">
+    <view class='avatar'>
+      <image src='{{item.author.avatar_url}}' bindtap='gotoZone' data-name="{{item.author.loginname}}"></image>
+      <label class='name' data-name="{{item.author.loginname}}" bindtap='gotoZone' bindtap='gotoZone'>{{item.author.loginname}}</label>
+    </view>
+    <view class='line1'></view>
+    <view class='content'>
+      <template is="wemark" data="{{...item.content}}"></template>
+    </view>
+    <view class='line2'></view>
+    <view class='opt'>
+      <icon class='reply fa fa-mail-reply' bindtap='addreplyUser' data-item='{{item}}'> 回复</icon>
+      <icon class='fa fa-thumbs-up {{item.is_uped?"active":""}}' bindtap='likeComent' data-item="{{item}}"> 点赞</icon>
+    </view>
+  </view>
+  <view class='myReplies' wx:if="{{myReplies.length>0}}">
+    <view class='tag'>新增评论</view>
+    <view class='content' wx:for="{{myReplies}}" wx:for-item="item">
+      {{item}}
+    </view>
+  </view>
+  <view class='end'>-END-</view>
+</view>
+<view style='height:120rpx;'></view>
+<view class='empty' wx:if="{{haveComments==false}}">
+  <icon class="fa fa-comments" />
+  <text>暂时还没有评论</text>
+</view>
+<view class='bottombar'>
+  <view wx:if="{{showCommentBtn}}" bindtap='showAddComment' class='commentbtn'>我来说两句</view>
+  <input wx:if="{{isAddCommentShow}}" placeholder='我来说两句' bindconfirm='addComment' bindblur='closeAddComment' focus='{{isAddCommentShow}}'></input>
+  <input wx:if="{{isRelpyCommentShow}}" focus='{{isRelpyCommentShow}}' bindconfirm="addComment" bindblur='closeReplyComment' placeholder='回复:{{replyItem.author.loginname}}'></input>
+</view>
+<view class='cover' wx:if="{{isRelpyCommentShow||isAddCommentShow}}">
+</view>

@@ -1,0 +1,68 @@
+/* pages/addTopic/index.wxss */
+
+.tabs {
+  height: 80rpx;
+  margin-top: 20rpx;
+}
+
+.tab.label {
+  font-weight: bold;
+  border: none !important;
+}
+
+.tabs .tab {
+  float: left;
+  margin-right: 10rpx;
+  padding: 10rpx 20rpx;
+  border: 1px solid gray;
+  border-radius: 10rpx;
+  font-size: 35rpx;
+}
+
+.tab.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.title {
+  padding: 10rpx;
+}
+
+.title input {
+  padding: 15rpx;
+  border-radius: 10rpx;
+  border: 1px solid gray;
+}
+
+.content {
+  padding: 0rpx 10rpx;
+}
+
+.content textarea {
+  border: 1px solid gray;
+  border-radius: 10rpx;
+  height: 700rpx;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.bottombar {
+  position: absolute;
+  left: 0rpx;
+  bottom: 0rpx;
+  padding: 10rpx;
+  background-color: #f4f5f5;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bottombar button {
+  background-color: dodgerblue !important;
+  color: white !important;
+}
+
+.bottombar button.button-hover {
+  background-color: dodgerblue !important;
+  color: white !important;
+}
